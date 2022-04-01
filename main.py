@@ -31,7 +31,6 @@ def main():
     maxim_hum = 0
     minim_hum = 100
 
-
     # definir oled width and height
     oled_width = 128
     oled_height = 64
@@ -75,17 +74,15 @@ def main():
         # que te de el minimo y el maximo de la temp registrada
         value_dht = [sensor.temperature()]
 
-
         for valor in value_dht:
             if valor < minim_temp:
                 minim_temp = valor
             if valor > maxim_temp:
                 maxim_temp = valor
-        oled.text("TEMP: "+str(maxim_temp) + "  " + str(minim_temp), 20, 40)
+        oled.text("TEMP: " + str(maxim_temp) + "  " + str(minim_temp), 20, 40)
 
         # que te de el minimo y el maximo de la hum registrada
         value_dht_hum = [sensor.humidity()]
-
 
         for valor_1 in value_dht_hum:
             if valor_1 < minim_hum:
