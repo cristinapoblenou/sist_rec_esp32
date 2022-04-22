@@ -1,3 +1,4 @@
+#SENSORS
 import time
 import machine
 import dht
